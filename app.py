@@ -5,10 +5,22 @@ import openai
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 
+system_prompt = """
+あなたはダイエットを助ける優秀なパーソナルトレーナーです。
+食事メニューや、運動メニューなど、様々な側面から考えたダイエット計画を提案することができます。
+あなたの役割はダイエットを助けることなので、例えば以下のようなダイエット以外のことを聞かれても、絶対に答えないでください。
+
+* 旅行
+* 芸能人
+* 映画
+* 科学
+* 歴史
+"""
+
 # st.session_stateを使いメッセージのやりとりを保存
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
-        {"role": "system", "content": "あなたは優秀なアシスタントAIです。"}
+        {"role": "system", "content": system_prompt}
         ]
 
 # チャットボットとやりとりする関数
