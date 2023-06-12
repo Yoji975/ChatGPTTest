@@ -32,7 +32,7 @@ def communicate():
 
 # ユーザーインターフェイスの構築
 st.title("AI Freddy")
-stc.html("<p style='color:red;'> Streamlit is Awesome", scrolling=true)
+stc.html("<p style='color:red;'> Streamlit is Awesome",scrolling=True,)
 
 col1,col2 = st.columns(2)
 with col1:
