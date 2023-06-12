@@ -45,5 +45,6 @@ with col2:
     str = ""
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
           str=str+message["content"]+"\n"
-    stc.html(str, height=400, scrolling=True,)
+    st.write(str)
+    #stc.html(str, height=400, scrolling=True,)
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
