@@ -6,10 +6,22 @@ import openai
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 freddy_content = st.secrets.Freddy.content
 
+system_prompt = """
+あなたは優秀な料理研究家です。
+限られた食材や時間で、様々な料理のレシピを提案することができます。
+あなたの役割はレシピを考えることなので、例えば以下のような料理以外ことを聞かれても、絶対に答えないでください。
+
+* 旅行
+* 芸能人
+* 映画
+* 科学
+* 歴史
+"""
+
 # st.session_stateを使いメッセージのやりとりを保存
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
-        {"role": "system", "content": freddy_content}
+        {"role": "system", "content": system_prompt}
         ]
 
 # チャットボットとやりとりする関数
