@@ -32,11 +32,12 @@ def communicate():
 
 # ユーザーインターフェイスの構築
 st.title("AI Freddy")
-st.image("Freddy.png")
+col1,col2 = st.columns(2)
+with col1:
+   st.image("Freddy.png")
 
-user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
-
-if st.session_state["messages"]:
+with col2:
+ if st.session_state["messages"]:
     messages = st.session_state["messages"]
 
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
@@ -45,3 +46,6 @@ if st.session_state["messages"]:
             speaker="🤖"
 
         st.write(speaker + ": " + message["content"])
+
+user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
+
