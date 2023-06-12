@@ -1,6 +1,10 @@
 import streamlit as st
 import streamlit.components.v1 as stc
 import openai
+import pyttsx3
+
+engine = pyttsx3.init()
+engine.say("Hello, World")
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
