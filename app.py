@@ -1,5 +1,6 @@
 
 import streamlit as st
+import streamlit.components.v1 as components
 import openai
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
@@ -37,7 +38,7 @@ with col1:
    st.image("Freddy.png")
 
 with col2:
- st.components.v1.html(scrolling=True)
+ components.html(scrolling=True)
  if st.session_state["messages"]:
     messages = st.session_state["messages"]
 
