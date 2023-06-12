@@ -41,11 +41,7 @@ with col2:
     messages = st.session_state["messages"]
 
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
-        speaker = "🙂"
-        if message["role"]=="assistant":
-            speaker="🤖"
-
-        st.write(speaker + ": " + message["content"])
+        st.write(message["content"])
 
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
 
