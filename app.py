@@ -6,8 +6,6 @@ import openai
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 freddy_content = st.secrets.Freddy.content
 
-stc.html("<p style='color:red;'> Streamlit is Awesome")
-
 # st.session_stateを使いメッセージのやりとりを保存
 if "messages" not in st.session_state:
     st.session_state["messages"] = [
@@ -34,6 +32,7 @@ def communicate():
 
 # ユーザーインターフェイスの構築
 st.title("AI Freddy")
+stc.html("<p style='color:red;'> Streamlit is Awesome")
 
 col1,col2 = st.columns(2)
 with col1:
