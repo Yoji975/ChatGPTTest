@@ -48,7 +48,7 @@ with col2:
           str=str+message["content"]+"<br>"
           cnt=cnt+1
           if cnt==2:
-            str=str+"========="
+            str=str+"========="+"<br>"
             cnt=0
     #st.write(str)
     stc.html(str, height=400, scrolling=True,)
