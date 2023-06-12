@@ -5,6 +5,7 @@ import pyttsx3
 
 engine = pyttsx3.init()
 engine.say("Hello, World")
+engine.runAndWait()
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
