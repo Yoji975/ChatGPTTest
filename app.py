@@ -1,10 +1,12 @@
 import streamlit as st
-import streamlit.components.v1 as components
+import streamlit.components.v1 as stc
 import openai
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
 freddy_content = st.secrets.Freddy.content
+
+stc.html("<p style='color:red;'> Streamlit is Awesome")
 
 # st.session_stateを使いメッセージのやりとりを保存
 if "messages" not in st.session_state:
