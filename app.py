@@ -33,12 +33,13 @@ def communicate():
 
 # ユーザーインターフェイスの構築
 st.title("AI Freddy")
+components.html(height=500)
+
 col1,col2 = st.columns(2)
 with col1:
    st.image("Freddy.png")
 
 with col2:
- components.html(height=500)
  if st.session_state["messages"]:
     messages = st.session_state["messages"]
 
