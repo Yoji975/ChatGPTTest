@@ -32,7 +32,7 @@ def communicate():
 
 # ユーザーインターフェイスの構築
 st.title("AI Freddy")
-stc.html("<p style='color:red;'> Streamlit is Awesome",scrolling=True,)
+# stc.html("<p style='color:red;'> Streamlit is Awesome",scrolling=True,)
 
 col1,col2 = st.columns(2)
 with col1:
@@ -43,6 +43,6 @@ with col2:
     messages = st.session_state["messages"]
 
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
-         st.write(message["content"])
-
+         #st.write(message["content"])
+          stc.html(message["content"],scrolling=True,)
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
