@@ -45,7 +45,7 @@ with col2:
     str = ""
     cnt = 0
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
-          str=str+message["content"]+"<br>
+          str=str+message["content"]+"<br>"
           cnt=cnt+1
           if cnt==2
             str=str+"========="
