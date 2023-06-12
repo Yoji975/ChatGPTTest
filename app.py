@@ -37,6 +37,7 @@ with col1:
    st.image("Freddy.png")
 
 with col2:
+ st.components.v1.html(scrolling=True)
  if st.session_state["messages"]:
     messages = st.session_state["messages"]
 
