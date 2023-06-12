@@ -38,7 +38,7 @@ with col1:
    st.image("Freddy.png")
 
 with col2:
- components.html(scrolling=True)
+ components.html(height=500)
  if st.session_state["messages"]:
     messages = st.session_state["messages"]
 
