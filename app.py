@@ -52,4 +52,4 @@ with col2:
             cnt=0
     #st.write(str)
     stc.html(str, height=400, scrolling=True,)
-user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
+user_input = st.text_input("Freddyに話しかけよう！", key="user_input", on_change=communicate)
