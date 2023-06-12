@@ -42,8 +42,8 @@ with col2:
  if st.session_state["messages"]:
     messages = st.session_state["messages"]
 
+    str = ""
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
-          #stc.write(message["content"])
-          stc.html(message["content"],scrolling=True,)
-    stc.html(scrolling=True,)
+          str=str+message["content"]
+    stc.html(str, scrolling=True,)
 user_input = st.text_input("メッセージを入力してください。", key="user_input", on_change=communicate)
