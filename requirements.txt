@@ -1,3 +1,2 @@
 streamlit==1.23.0
-ttslearn==0.2.2
 openai
