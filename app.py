@@ -58,7 +58,7 @@ with col2:
 
     str = ""
     cnt = 0
-    result = ""
+    result = "hi"
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
           str=str+message["content"]+"<br>"
           cnt=cnt+1
@@ -68,7 +68,7 @@ with col2:
             str=str+"========="+"<br>"
             cnt=0
             
-    tts=gTTS("hi", lang='en')
+    tts=gTTS(result, lang='en')
     tts.write_to_fp(sound_file)
     st.audio(sound_file)
     stc.html(str, height=400, scrolling=True,)
