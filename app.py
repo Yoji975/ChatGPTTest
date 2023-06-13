@@ -3,14 +3,12 @@ import streamlit.components.v1 as stc
 import openai
 #import pyttsx3
 import ttslearn
-import IPython
-from IPython.display import Audio
 from ttslearn.dnntts import DNNTTS
 
 dnntts_engine = DNNTTS()
 
 %time wav, sr = dnntts_engine.tts("あらゆる現実を、すべて自分のほうへねじ曲げたのだ。")
-IPython.display.display(Audio(wav, rate=sr))
+
 
 #engine = pyttsx3.init('dummy')
 #engine.say('hello')
