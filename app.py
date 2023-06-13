@@ -6,10 +6,10 @@ from gtts import gTTS
 from io import BytesIO
 
 sound_file = BytesIO()
-tts = gTTS('hello', lang='en')
-tts.write_to_fp(sound_file)
 
-st.audio(sound_file)
+#tts = gTTS('hello', lang='en')
+#tts.write_to_fp(sound_file)
+#st.audio(sound_file)
 
 #engine = pyttsx3.init('dummy')
 #engine.say('hello')
@@ -57,13 +57,14 @@ with col2:
 
     str = ""
     cnt = 0
+    placeholder = st.empty()
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
           str=str+message["content"]+"<br>"
           cnt=cnt+1
           if cnt==2:
             tts=gTTS('Hi', lang='en')
             tts.write_to_fp(sound_file)
-            st.audio(sound_file)
+            placeholer.audio(sound_file)
             str=str+"========="+"<br>"
             cnt=0
     #st.write(str)
