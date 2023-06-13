@@ -67,7 +67,8 @@ with col2:
           if cnt==2:
             str=str+"========="+"<br>"
             cnt=0
-    tts=gTTS(result, lang='en')
+            
+    tts=gTTS("hi", lang='en')
     tts.write_to_fp(sound_file)
     st.audio(sound_file)
     stc.html(str, height=400, scrolling=True,)
