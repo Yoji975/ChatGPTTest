@@ -63,6 +63,7 @@ with col2:
           if cnt==2:
             tts=gTTS('Hi', lang='en')
             tts.write_to_fp(sound_file)
+            st.audio(sound_file)
             str=str+"========="+"<br>"
             cnt=0
     #st.write(str)
