@@ -60,8 +60,9 @@ with col2:
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
           str=str+message["content"]+"<br>"
           cnt=cnt+1
-          engine.say("Hello, World")
-          engine.runAndWait()
+          if cnt==1:
+           tts=gTTS(str, lang='en')
+　         tts.write_to_fp(sound_file)
           if cnt==2:
             str=str+"========="+"<br>"
             cnt=0
