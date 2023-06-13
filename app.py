@@ -57,16 +57,14 @@ with col2:
 
     str = ""
     cnt = 0
-    placeholder = st.empty()
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
           str=str+message["content"]+"<br>"
           cnt=cnt+1
           if cnt==2:
-            tts=gTTS('Hi', lang='en')
-            tts.write_to_fp(sound_file)
-            placeholer.audio(sound_file)
             str=str+"========="+"<br>"
             cnt=0
-    #st.write(str)
+    tts=gTTS('Hi', lang='en')
+    tts.write_to_fp(sound_file)
+    st.audio(sound_file)
     stc.html(str, height=400, scrolling=True,)
 user_input = st.text_input("Freddyに話しかけよう！", key="user_input", on_change=communicate)
