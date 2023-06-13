@@ -4,7 +4,8 @@ import openai
 import pyttsx3
 
 engine = pyttsx3.init('dummy')
-engine.say('hello')
+#engine.say('hello')
+engine.save_to_file("hello","name.mp3")
 engine.runAndWait()
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
