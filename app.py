@@ -2,13 +2,6 @@ import streamlit as st
 import streamlit.components.v1 as stc
 import openai
 #import pyttsx3
-import ttslearn
-from ttslearn.dnntts import DNNTTS
-
-dnntts_engine = DNNTTS()
-
-%time wav, sr = dnntts_engine.tts("あらゆる現実を、すべて自分のほうへねじ曲げたのだ。")
-
 
 #engine = pyttsx3.init('dummy')
 #engine.say('hello')
