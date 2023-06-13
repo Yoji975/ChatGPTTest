@@ -2,6 +2,14 @@ import streamlit as st
 import streamlit.components.v1 as stc
 import openai
 #import pyttsx3
+from gtts import gTTS
+from io import BytesIO
+
+sound_file = BytesIO()
+tts = gTTS('hello', lang='en')
+tts.write_to_fp(sound_file)
+
+st.audio(sound_file)
 
 #engine = pyttsx3.init('dummy')
 #engine.say('hello')
