@@ -3,7 +3,7 @@ import streamlit.components.v1 as stc
 import openai
 import pyttsx3
 
-engine = pyttsx3.init('dummy')
+engine = pyttsx3.init('sapi5')
 engine.say("Hello, World")
 engine.runAndWait()
 
