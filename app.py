@@ -63,7 +63,7 @@ with col2:
           str=str+message["content"]+"<br>"
           cnt=cnt+1
           if cnt==1:
-            result=re.sub(r"[^a-zA-Z]", "",str)
+            result=re.sub(r"[^a-zA-Z]", "",message["content"])
             result = result.lstrip("Freddy")
             result = result.rstrip("rbrb")
           if cnt==2:
