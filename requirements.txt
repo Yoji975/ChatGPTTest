@@ -1,2 +1,4 @@
 streamlit==1.23.0
 openai
+gTTS
+BytesIO
