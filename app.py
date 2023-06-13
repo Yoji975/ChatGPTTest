@@ -4,6 +4,7 @@ import openai
 #import pyttsx3
 from gtts import gTTS
 from io import BytesIO
+import re
 
 sound_file = BytesIO()
 
@@ -57,13 +58,16 @@ with col2:
 
     str = ""
     cnt = 0
+    result = ""
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
           str=str+message["content"]+"<br>"
           cnt=cnt+1
+          if cnt==1:
+            result=re.sub(r"[^a-zA-Z]", "",str)
           if cnt==2:
             str=str+"========="+"<br>"
             cnt=0
-    tts=gTTS('Hi', lang='en')
+    tts=gTTS(result, lang='en')
     tts.write_to_fp(sound_file)
     st.audio(sound_file)
     stc.html(str, height=400, scrolling=True,)
