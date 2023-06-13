@@ -1,12 +1,20 @@
 import streamlit as st
 import streamlit.components.v1 as stc
 import openai
-import pyttsx3
+#import pyttsx3
+import ttslearn
+import IPython
+from IPython.display import Audio
+from ttslearn.dnntts import DNNTTS
 
-engine = pyttsx3.init('dummy')
+dnntts_engine = DNNTTS()
+
+%time wav, sr = dnntts_engine.tts("あらゆる現実を、すべて自分のほうへねじ曲げたのだ。")
+IPython.display.display(Audio(wav, rate=sr))
+
+#engine = pyttsx3.init('dummy')
 #engine.say('hello')
-engine.save_to_file(input(),"name.mp3")
-engine.runAndWait()
+#engine.runAndWait()
 
 # Streamlit Community Cloudの「Secrets」からOpenAI API keyを取得
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
