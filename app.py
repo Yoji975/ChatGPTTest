@@ -58,12 +58,14 @@ with col2:
 
     str = ""
     cnt = 0
+    cnt2 = 0
     result = "hi"
     for message in reversed(messages[1:]):  # 直近のメッセージを上に
           str=str+message["content"]+"<br>"
           cnt=cnt+1
-          if cnt==1:
-            result=re.sub(r"[^a-zA-Z]", "",message["content"])
+          cnt2=cnt2+1
+          if cnt2==1:
+            result=re.sub(r"[^a-zA-Z]", "",str)
             result = result.lstrip("Freddy")
             result = result.rstrip("rbrb")
           if cnt==2:
