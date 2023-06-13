@@ -64,6 +64,8 @@ with col2:
           cnt=cnt+1
           if cnt==1:
             result=re.sub(r"[^a-zA-Z]", "",str)
+            result = result.lstrip("Freddy")
+            result = result.rstrip("rbrb")
           if cnt==2:
             str=str+"========="+"<br>"
             cnt=0
