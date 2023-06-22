@@ -72,17 +72,18 @@ with col2:
           if cnt==2:
             str=str+"========="+"<br>"
             cnt=0
-            
-    tts=gTTS(result, lang='en')
-    tts.write_to_fp(sound_file)
-    url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&lang=en_us&voice=Lizzy&text=Hello"
-    #url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&command=voiceinfo"
+
+    #GoogleTexttoSpeechにアクセス
+    #tts=gTTS(result, lang='en')
+    #tts.write_to_fp(sound_file)
+    #st.audio(sound_file)
+
+    #HOYAAPIにアクセス
+    url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&lang=en_us&voice=Lizzy&text="+result
     r = requests.get(url)
     response = r.content
-    #response = r.json()
-    #st.audio(sound_file)
+    
     st.audio(response)
-    #st.title(r)
     stc.html(str, height=400, scrolling=True,)
     
 
