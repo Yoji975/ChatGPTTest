@@ -75,12 +75,12 @@ with col2:
             
     tts=gTTS(result, lang='en')
     tts.write_to_fp(sound_file)
-    #url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&lang=en_us&voice=Male01&text=Hello"
-    url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&command=voiceinfo"
+    url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&lang=en_us&voice=Lizzy&text=Hello"
+    #url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&command=voiceinfo"
     r = requests.get(url)
-    response = r.json()
+    #response = r.json()
     # st.audio(sound_file)
-    st.title(response)
+    st.title(r)
     stc.html(str, height=400, scrolling=True,)
     
 
