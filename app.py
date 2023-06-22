@@ -71,7 +71,7 @@ with col2:
             result = " ".join(tmp)
             result = result.lstrip("Freddy")
             result = result.rstrip("rbrb")
-            result = re.sub(result, "", "br$)
+            result = re.sub(result, "", "br$")
           if cnt==2:
             str=str+"========="+"<br>"
             cnt=0
