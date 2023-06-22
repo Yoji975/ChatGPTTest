@@ -78,9 +78,10 @@ with col2:
     url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&lang=en_us&voice=Lizzy&text=Hello"
     #url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&command=voiceinfo"
     r = requests.get(url)
+    response = r.mp3()
     #response = r.json()
     #st.audio(sound_file)
-    st.title(r.json())
+    st.audio(response)
     #st.title(r)
     stc.html(str, height=400, scrolling=True,)
     
