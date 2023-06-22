@@ -79,7 +79,7 @@ with col2:
     #st.audio(sound_file)
 
     #HOYAAPIにアクセス
-    url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&lang=en_us&voice=Lizzy&text="+result
+    url = "https://scapi-eu.readspeaker.com/a/speak?key=b6ddbe58ee4dae1f3987cb9f811f112f&lang=en_us&voice=Julie-DNN&text="+result
     r = requests.get(url)
     response = r.content
     
