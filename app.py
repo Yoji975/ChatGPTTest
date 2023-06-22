@@ -80,7 +80,7 @@ with col2:
     r = requests.get(url)
     #response = r.json()
     #st.audio(sound_file)
-    st.audio(r.mp3)
+    st.audio(r.json)
     #st.title(r)
     stc.html(str, height=400, scrolling=True,)
     
