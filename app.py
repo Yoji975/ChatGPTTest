@@ -70,7 +70,8 @@ with col2:
             tmp=re.findall(r"[a-zA-Z]+",str)
             result = " ".join(tmp)
             result = result.lstrip("Freddy")
-            result = result.rstrip("rbrbrb")
+            result = result.rstrip("rbrb")
+            result = result.rstrip("rb")
           if cnt==2:
             str=str+"========="+"<br>"
             cnt=0
