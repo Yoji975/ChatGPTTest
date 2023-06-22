@@ -83,7 +83,7 @@ with col2:
     r = requests.get(url)
     response = r.content
 
-    st.title(url)
+    st.text(result)
     st.audio(response)
     stc.html(str, height=400, scrolling=True,)
     
