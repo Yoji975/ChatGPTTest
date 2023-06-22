@@ -76,7 +76,7 @@ with col2:
     tts=gTTS(result, lang='en')
     tts.write_to_fp(sound_file)
     url = "https://scapi-eu.readspeaker.com/a/speak?key=507e6463a505de27dbee4f7690c77093&lang=en_us&voice=Male01&text=HelloWorld"
-    r = requests.get(url, headers=headers)
+    r = requests.get(url)
     # st.audio(sound_file)
     st.title(r)
     stc.html(str, height=400, scrolling=True,)
