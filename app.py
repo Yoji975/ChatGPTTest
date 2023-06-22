@@ -66,7 +66,8 @@ with col2:
           cnt=cnt+1
           cnt2=cnt2+1
           if cnt2==1:
-            result=re.sub(r"[^a-zA-Z]", "",str)
+            tmp=re.findall(r"[^a-zA-Z]", "",str)
+            result = " ".join(tmp)
             result = result.lstrip("Freddy")
             result = result.rstrip("rbrb")
           if cnt==2:
